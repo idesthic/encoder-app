@@ -1,0 +1,28 @@
+<div class="sign-in-container">
+  <form [formGroup]="signInForm" class="form">
+    <div class="form-row heading">
+      <h1>Sign in</h1>
+    </div>
+    <div class="form-row form-input">
+      <label for="email">Email address:</label>
+      <input id="email" type="text" formControlName="email" placeholder="address@mail.com" required>
+    </div>
+    <div *ngIf="submittedSignInForm && validateSignInForm.email.errors" class="form-error">
+      <span *ngIf="validateSignInForm.email.errors.required">* Required field</span>
+      <span *ngIf="validateSignInForm.email.errors.email">* Incorrect format</span>
+    </div>
+
+    <div class="form-row form-input">
+      <label for="password">Password:</label>
+      <input id="password" type="password" formControlName="password" placeholder="••••••" required>
+    </div>
+    <div *ngIf="submittedSignInForm && validateSignInForm.password.errors" class="form-error">
+      <span *ngIf="validateSignInForm.password.errors.required">* Required field</span>
+      <span *ngIf="validateSignInForm.password.errors.pattern">* Password should be at least 6 characters long and include at least 1 number</span>
+    </div>
+
+    <div class="form-row sign-in-btn">
+      <button (click)="submitSignIn()">Sign in</button>
+    </div>
+  </form>
+</div>

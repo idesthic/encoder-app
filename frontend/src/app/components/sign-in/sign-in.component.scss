@@ -1,0 +1,66 @@
+@import "../../../styles.scss";
+
+.sign-in-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(218,218,217,1) 67%);
+}
+
+.form {
+  padding: 2rem 3rem;
+  width: 320px;
+  max-height: 400px;
+  @include card;
+  @include ralewayFontFamily;
+}
+
+.form-row {
+  padding: 1rem 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+
+  label {
+    font-weight: 500;
+  }
+
+  input {
+    @include inputStyle;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+}
+
+.form-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-error {
+  color: $red;
+  padding: 0 0.5rem;
+}
+
+.heading, .sign-in-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.heading h1 {
+  @include promptFontFamily;
+  font-weight: 500;
+}
+
+.sign-in-btn {
+  button {
+    @include blackBtn;
+  }
+}

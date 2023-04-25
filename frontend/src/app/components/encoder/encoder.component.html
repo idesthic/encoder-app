@@ -1,0 +1,27 @@
+<div class="encoder-container">
+  <div class="sign-out-wrapper">
+    <button (click)="signOut()">Sign out</button>
+  </div>
+
+  <div class="main-container">
+    <img src="../../../assets/images/logo.png" class="logo" alt="logo">
+
+    <div class="encoder-card">
+      <div class="card-section">
+        <h1 class="encoder-row">Input a string of characters to encode:</h1>
+        <input type="text" class="encoder-row" [(ngModel)]="userString" placeholder="e.g. XXXYYYYZZQXX">
+      </div>
+
+      <div class="card-section">
+        <h2 class="encoder-row">Encoder output:</h2>
+        <p class="encoder-row encoded-output">{{ encoderOutput }}</p>
+      </div>
+
+      <div class="buttons">
+        <button (click)="encodeString()">Encode</button>
+        <button *ngIf="encoderOutput !== ''" (click)="clear()">Clear</button>
+      </div>
+    </div>
+  </div>
+</div>
+

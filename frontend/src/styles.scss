@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700&family=Raleway:wght@200;300;400;500;600;700&display=swap');
+
+// Colors
+$white: #FFFFFF;
+$red: #d40004;
+$blue: #1f4acc;
+$grey: #6e6e6e;
+$black: #171717;
+
+// Fonts
+@mixin ralewayFontFamily {
+  font-family: 'Raleway', sans-serif;
+}
+
+@mixin promptFontFamily {
+  font-family: 'Prompt', sans-serif;
+}
+
+@mixin card {
+  background: rgba( 255, 255, 255, 0.4 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+@mixin inputStyle {
+  @include ralewayFontFamily;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  border: 1px solid grey;
+  height: 2rem;
+}
+
+// Buttons
+@mixin blackBtn {
+  margin: 1rem 0 0.5rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.4rem;
+  background-color: $black;
+  color: $white;
+  @include ralewayFontFamily;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Raleway', sans-serif; }
+
+
+
+
+
